@@ -10,6 +10,6 @@ jobs:
         id: image-id
         uses: s3vt/image-id-action@v1
         with:
-          image_name: "s3vt/java:11"
+          image_name: "s3vt/java:17"
       - name: Print the image ID
         run: echo "Image ID is ${{ steps.image-id.outputs.image_id }}"
