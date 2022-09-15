@@ -1,0 +1,15 @@
+on:
+  workflow_dispatch:
+
+jobs:
+  image-id-step:
+    runs-on: ubuntu-latest
+    name: Get Image ID
+    steps:
+      - name: Image ID
+        id: image-id
+        uses: s3vt/image-id-action@v1
+        with:
+          image_name: "s3vt/java:11"
+      - name: Print the image ID
+        run: echo "Image ID is ${{ steps.image-id.outputs.image_id }}"
