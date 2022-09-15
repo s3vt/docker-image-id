@@ -1,6 +1,6 @@
 #!/bin/bash
 
-function egzit () { echo $1; exit $2 }
+function egzit () { echo $1; exit $2; }
 
 IMAGE_NAME=$1
 

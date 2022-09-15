@@ -8,7 +8,7 @@ This is useful if you want to check if images have been updated (comparing new v
 ```yml
   - name: Image ID
     id: image-id
-    uses: s3vt/image-id-action@v1
+    uses: s3vt/image-id-action@v1.0.0
     with:
       image_name: "s3vt/java:18"
 ```
@@ -26,7 +26,7 @@ jobs:
     steps:
       - name: Image ID
         id: image-id
-        uses: s3vt/image-id-action@v1.0.1
+        uses: s3vt/image-id-action@v1.0.0
         with:
           image_name: "s3vt/java:17"
       - name: Print the image ID
