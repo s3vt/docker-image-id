@@ -1,0 +1,17 @@
+name: "Get Image ID"
+description: "Gets image id for the supplied image name"
+inputs:
+  image_name:
+    description: "Image name e.g. alpine:latest"
+    required: true
+    default: "alpine:latest"
+outputs:
+  image_id:
+    description: "Image ID for input image name"
+    value: ${{ steps.get-image-id.outputs.image_id }} 
+runs:
+  using: "composite"
+  steps:
+    - run: ${{ github.action_path }}/get_image_id.bash ${{ inputs.image_name }}
+      shell: bash
+      id: get-image-id
