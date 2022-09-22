@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: Image ID
         id: image-id
-        uses: s3vt/image-id-action@v1.0.0
+        uses: s3vt/docker-image-id@v1.0.0
         with:
           image_name: "s3vt/java:17"
       - name: Print the image ID
